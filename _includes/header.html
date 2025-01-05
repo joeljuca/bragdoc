@@ -1,0 +1,28 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1>
+          <a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+        </h1>
+      </div>
+
+      <div class="column">
+        <nav style="text-align: right">
+          <ul style="list-style: none">
+            {%- for p in site.pages -%} {%- if p.title -%}
+            <li style="display: inline">
+              <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+            </li>
+            {%- endif -%} {%- endfor -%}
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <hr />
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,21 @@
+---
+layout: root
+---
+
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <header>
+          {%- for post in site.posts -%} {%- if post.title -%}
+          <h1>
+            <a href="{{ page.url }}">{{ page .title | escape }}</a>
+          </h1>
+          {%- endif -%} {%- endfor -%}
+        </header>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>
