@@ -1,0 +1,14 @@
+html {
+  font-size: 24px;
+}
+
+nav {
+  text-align: right;
+}
+nav ul {
+  list-style: none;
+  width: 100%;
+}
+nav ul li::before {
+  content: "";
+}

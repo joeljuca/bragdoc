@@ -1,28 +1,26 @@
 <header>
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <h1>
-          <a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-        </h1>
-      </div>
-
-      <div class="column">
-        <nav style="text-align: right">
-          <ul style="list-style: none">
-            {%- for p in site.pages -%} {%- if p.title -%}
-            <li style="display: inline">
-              <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-            </li>
-            {%- endif -%} {%- endfor -%}
-          </ul>
-        </nav>
-      </div>
+  <div class="row flex-center" style="margin-bottom: 0">
+    <div class="col col-4">
+      <p>
+        <strong
+          ><a href="{{ '/' | relative_url }}"
+            >{{ site.title | escape }}</a
+          ></strong
+        >
+      </p>
     </div>
-    <div class="row">
-      <div class="column">
-        <hr />
-      </div>
+
+    <div class="col col-4">
+      <nav>
+        <ul>
+          {%- for p in site.nav_menu -%}
+          <li style="display: inline">
+            <a href="{{ p.path | relative_url }}">{{ p.title }}</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
     </div>
   </div>
+  <hr />
 </header>

@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      href="https://unpkg.com/papercss@1.9.2/dist/paper.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
-    />
+    <link rel="stylesheet" href="/assets/style.css" />
 
     {%- feed_meta -%}
   </head>
-  <body style="padding: 2rem 0">
+
+  <body>
     {%- include header.html -%}
 
     <main>{{ content }}</main>
